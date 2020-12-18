@@ -76,6 +76,12 @@ public class ScenesMove : MonoBehaviour
         SceneManager.LoadScene("1_Stage03");
         GameManager.stageIndex = 3;
     }
+
+    public void GoStage4()
+    {
+        SceneManager.LoadScene("1_Stage04");
+        GameManager.stageIndex = 4;
+    }
     #endregion
 
     #endregion

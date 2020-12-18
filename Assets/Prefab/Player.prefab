@@ -121,11 +121,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 6
   jumpPower: 8
-  audioJump: {fileID: 8300000, guid: ad4ad86591b3c034b862ee7669909596, type: 3}
-  audioAttack: {fileID: 8300000, guid: 80cf90f5057fee94eb68227502913ee4, type: 3}
-  audioItem: {fileID: 8300000, guid: 2bfa91743ec4021489e31ca1d55a43ec, type: 3}
+  audioJump: {fileID: 8300000, guid: 6e886ed03e7c37649873ee169fc0a3bd, type: 3}
+  audioAttack: {fileID: 8300000, guid: 478a673449dffc84ebe9ed882dbf6ea0, type: 3}
+  audioItem: {fileID: 8300000, guid: d6e6b4efedb82f94cbef6a13287da8ea, type: 3}
   audioDie: {fileID: 8300000, guid: 370f2fe359326754baf0e2e70f3e117a, type: 3}
-  audioYeah: {fileID: 8300000, guid: d508f693d53d35b4886b6886022cc461, type: 3}
+  audioYeah: {fileID: 8300000, guid: 380bacc90fb49cf4491ec570aa823871, type: 3}
 --- !u!50 &5221413487950962535
 Rigidbody2D:
   serializedVersion: 4
@@ -175,7 +175,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.16
   m_Pitch: 1
   Loop: 0
   Mute: 0

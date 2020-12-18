@@ -7,6 +7,8 @@ using System;
 
 public class MyBehavior2 : MonoBehaviour
 {
+    public Text title;
+
     public InputField inputLoginID;
     public InputField inputLoginPW;
 
@@ -19,7 +21,9 @@ public class MyBehavior2 : MonoBehaviour
     public Text idRankText;
     public Text RankText;
 
-    int MaxUser = 4;
+    int MaxUser;
+
+    String BASE_URL = "http://54.158.205.18/";
 
 
     // Start is called before the first frame update
@@ -86,7 +90,7 @@ public class MyBehavior2 : MonoBehaviour
         form.AddField("userid", UserID);
         form.AddField("passwd", UserPW);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://3.225.96.85/login", form);
+        UnityWebRequest www = UnityWebRequest.Post(BASE_URL+"login", form);
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
@@ -128,7 +132,7 @@ public class MyBehavior2 : MonoBehaviour
 
         Debug.Log("userid: " + UserID + " PW: " + UserPW);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://3.225.96.85/register", form);
+        UnityWebRequest www = UnityWebRequest.Post(BASE_URL+"register", form);
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
@@ -138,7 +142,30 @@ public class MyBehavior2 : MonoBehaviour
         else
         {
             Debug.Log(www.downloadHandler.text);
+
+            string body = www.downloadHandler.text;
+
+            JObject jo = JObject.Parse(body);
+
+            Debug.Log(jo);
+
+
+            string oFlag = jo.SelectToken("psss").ToString();
+
+            if (oFlag.Equals("False"))
+            {
+                inputSignID.text = "";
+                inputSignPW.text = "";
+
+                title.text = "중복입니다";
+                Invoke("setTitle('Sign up')", 5);
+            }
         }
+    }
+
+    void setTitle(string title)
+    {
+        this.title.text = title;
     }
 
     IEnumerator PostInfo()
@@ -149,7 +176,7 @@ public class MyBehavior2 : MonoBehaviour
         form.AddField("user_kill", GameManager.Kill);
         Debug.Log(UserID + " " + GameManager.Point + " " + GameManager.Kill);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://3.225.96.85/infoadd", form);
+        UnityWebRequest www = UnityWebRequest.Post(BASE_URL+"infoadd", form);
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
@@ -166,7 +193,7 @@ public class MyBehavior2 : MonoBehaviour
     {
         WWWForm form = new WWWForm();
 
-        UnityWebRequest www = UnityWebRequest.Post("http://3.225.96.85/score", form);
+        UnityWebRequest www = UnityWebRequest.Post(BASE_URL + "score", form);
         www.SetRequestHeader("userid", UserID);
         yield return www.SendWebRequest();
 
@@ -198,7 +225,7 @@ public class MyBehavior2 : MonoBehaviour
     {
         WWWForm form = new WWWForm();
 
-        UnityWebRequest www = UnityWebRequest.Post("http://3.225.96.85/user_kill", form);
+        UnityWebRequest www = UnityWebRequest.Post(BASE_URL + "user_kill", form);
         www.SetRequestHeader("userid", UserID);
         yield return www.SendWebRequest();
 
@@ -230,7 +257,7 @@ public class MyBehavior2 : MonoBehaviour
     {
         WWWForm form = new WWWForm();
 
-        UnityWebRequest www = UnityWebRequest.Get("http://3.225.96.85/user_rank_score");
+        UnityWebRequest www = UnityWebRequest.Get(BASE_URL + "user_rank_score");
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
@@ -244,6 +271,8 @@ public class MyBehavior2 : MonoBehaviour
             string Rank = www.downloadHandler.text;
 
             JObject jo = JObject.Parse(Rank);
+
+            Debug.Log(jo);
 
             idRankText.text = "";
             RankText.text = "";
@@ -262,7 +291,7 @@ public class MyBehavior2 : MonoBehaviour
     {
         WWWForm form = new WWWForm();
 
-        UnityWebRequest www = UnityWebRequest.Get("http://3.225.96.85/user_rank_kill");
+        UnityWebRequest www = UnityWebRequest.Get(BASE_URL + "user_rank_kill");
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)

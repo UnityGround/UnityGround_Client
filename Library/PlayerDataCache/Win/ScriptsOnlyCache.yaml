@@ -95,11 +95,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -111,8 +107,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11824}
-    - Class: 114
-      Script: {instanceID: 12134}
     - Class: 114
       Script: {instanceID: 12138}
     - Class: 114
@@ -126,8 +120,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15132}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -491,6 +483,93 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 1839735485
       Script: {instanceID: 0}
+    Assets/Scenes/1_Stage04.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 602}
+    - Class: 114
+      Script: {instanceID: 11824}
+    - Class: 114
+      Script: {instanceID: 12134}
+    - Class: 114
+      Script: {instanceID: 12138}
+    - Class: 114
+      Script: {instanceID: 12190}
+    - Class: 114
+      Script: {instanceID: 12312}
+    - Class: 114
+      Script: {instanceID: 12898}
+    - Class: 114
+      Script: {instanceID: 13322}
+    - Class: 114
+      Script: {instanceID: 13676}
+    - Class: 114
+      Script: {instanceID: 14030}
+    - Class: 114
+      Script: {instanceID: 14494}
+    - Class: 114
+      Script: {instanceID: 14892}
+    - Class: 114
+      Script: {instanceID: 15132}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
+      Script: {instanceID: 0}
     Assets/Scenes/2_RankAll.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -712,7 +791,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 3721b64bb08416aa699c7d7d6739e1e6
+      Hash: 673dd58d8a44401eb2f927259dbf13f1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MyBehavior2
@@ -1126,6 +1205,7 @@ ScriptsOnlyBuild:
   - Assets/Scenes/1_Stage01.unity
   - Assets/Scenes/1_Stage02.unity
   - Assets/Scenes/1_Stage03.unity
+  - Assets/Scenes/1_Stage04.unity
   - Assets/Scenes/2_RankAll.unity
   - Assets/Scenes/2_RankUser.unity
-  playerPath: D:/unityHub/Unity Project2/UnityBuild/Unity Project2.exe
+  playerPath: D:/unityHub/UnityGround_Client_An/UnityBuild/Unity Project2.exe

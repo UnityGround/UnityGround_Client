@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     static public Image[] UIhealth = new Image[3];
     static public Text UIPoint;
     static public Text UIStage;
-    static public string stageStr = "STAGE1";
+    static public string stageStr = "STAGE3";
 
     static public Button RestartBtn;
     static public Button NextStageBtn;
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     static public Text TimerText;
     static public float Timer = 0;
 
-    int finishStage = 3;
+    int lastStage = 4;
 
     MyBehavior2 my;
 
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         {
             MainBtn.gameObject.SetActive(true);
         }
-        else if (stageIndex == finishStage)
+        else if (stageIndex == lastStage)
         {
             StageChooseBtn.gameObject.SetActive(true);
         }
@@ -175,6 +175,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("0_Tutorial");
         
         Time.timeScale = 1;
+        Timer = 0;
         Point = 0;
         Kill = 0;
         health = 3;
